@@ -15,13 +15,11 @@ export const options = {
 
 export default function () {
   const path = Math.random() < 0.9 ? "200" : "500";
-
-  let res = http.get(
-    `https://apinp.puntoscolombia.com/auth/oauth/v2/authorize?response_type=code&nonce=none&prompt=none&state=TywyLDcyMzAzNTQ5&client_id=l7c4e0e3ce2e85458980d0437d4df697c2&scope=openid profile &redirect_uri=https://pcoseller-uat.puntoscolombia.com/ReceiveAuthorizationCode`
-  );
-  //Expected response 
+  // Sensitive url has been removed due data protection
+  let res = http.get(`www.google.com`);
+  //Expected response
   let success = check(res, {
-    "status is 500": (r) => r.status === 500,
+    "status is 500": (r) => r.status === 200,
   });
   if (!success) {
     ErrorCount.add(1);

@@ -1,4 +1,4 @@
-# Performance Testing with K6 and grafana Modified by JuanP Carvajal
+# Performance Testing with K6 and grafana Modified by JuanP Carvajal 
 
 ## start:
 - `docker-compose up -d influxdb grafana`
